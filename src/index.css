@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* VIGYAAN Design System - Geospatial Emergency Management Theme
+All colors MUST be HSL. Inspired by earth tones, water, emergency alerts, and infrastructure mapping.
+*/
+
+@layer base {
+  :root {
+    /* Base colors - Clean earth tones */
+    --background: 210 10% 98%;
+    --foreground: 220 20% 15%;
+
+    /* Cards and surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+
+    /* Primary - Deep blue inspired by water bodies and official mapping */
+    --primary: 210 60% 35%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 210 80% 55%;
+
+    /* Secondary - Earth/terrain brown */
+    --secondary: 25 30% 92%;
+    --secondary-foreground: 25 40% 25%;
+
+    /* Muted tones */
+    --muted: 210 15% 94%;
+    --muted-foreground: 220 10% 45%;
+
+    /* Accent - Infrastructure green */
+    --accent: 140 40% 90%;
+    --accent-foreground: 140 60% 25%;
+
+    /* Emergency/Alert colors */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 98%;
+    --warning: 35 85% 55%;
+    --warning-foreground: 35 100% 10%;
+
+    /* Borders and inputs */
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 210 60% 35%;
+
+    /* Custom VIGYAAN colors */
+    --flood-zone: 200 85% 45%;
+    --earthquake-zone: 0 75% 55%;
+    --rainfall-zone: 220 60% 50%;
+    --safe-zone: 140 55% 45%;
+    --hospital: 340 75% 55%;
+    --school: 25 85% 55%;
+    --transport: 260 60% 55%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(210 60% 35%), hsl(140 55% 45%));
+    --gradient-map: linear-gradient(180deg, hsl(210 10% 98%), hsl(210 15% 94%));
+    --gradient-emergency: linear-gradient(45deg, hsl(0 75% 55%), hsl(35 85% 55%));
+
+    /* Shadows and effects */
+    --shadow-map: 0 10px 30px -5px hsl(210 60% 35% / 0.15);
+    --shadow-emergency: 0 5px 20px -5px hsl(0 75% 55% / 0.25);
+    --shadow-glow: 0 0 30px hsl(210 80% 55% / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    /* Sidebar colors */
+    --sidebar-background: 210 10% 97%;
+    --sidebar-foreground: 220 20% 20%;
+    --sidebar-primary: 210 60% 35%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 210 15% 92%;
+    --sidebar-accent-foreground: 220 20% 20%;
+    --sidebar-border: 210 20% 85%;
+    --sidebar-ring: 210 60% 35%;
+  }
+
+  .dark {
+    /* Dark mode for night operations and low-light conditions */
+    --background: 220 25% 8%;
+    --foreground: 210 15% 92%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 210 15% 92%;
+
+    --popover: 220 20% 12%;
+    --popover-foreground: 210 15% 92%;
+
+    --primary: 210 80% 65%;
+    --primary-foreground: 220 25% 8%;
+    --primary-glow: 210 90% 75%;
+
+    --secondary: 25 20% 15%;
+    --secondary-foreground: 25 15% 85%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 10% 65%;
+
+    --accent: 140 30% 20%;
+    --accent-foreground: 140 40% 85%;
+
+    --destructive: 0 85% 65%;
+    --destructive-foreground: 220 25% 8%;
+    --warning: 35 90% 65%;
+    --warning-foreground: 35 100% 10%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 210 80% 65%;
+
+    /* Dark mode emergency colors */
+    --flood-zone: 200 90% 65%;
+    --earthquake-zone: 0 85% 65%;
+    --rainfall-zone: 220 80% 70%;
+    --safe-zone: 140 70% 55%;
+    --hospital: 340 85% 65%;
+    --school: 25 90% 65%;
+    --transport: 260 80% 65%;
+
+    /* Dark gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(220 25% 8%), hsl(220 20% 12%));
+    --gradient-map: linear-gradient(180deg, hsl(220 20% 12%), hsl(220 15% 15%));
+    --gradient-emergency: linear-gradient(45deg, hsl(0 85% 65%), hsl(35 90% 65%));
+
+    /* Dark shadows */
+    --shadow-map: 0 10px 30px -5px hsl(0 0% 0% / 0.5);
+    --shadow-emergency: 0 5px 20px -5px hsl(0 85% 65% / 0.3);
+    --shadow-glow: 0 0 30px hsl(210 90% 75% / 0.2);
+
+    /* Dark sidebar */
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 210 15% 88%;
+    --sidebar-primary: 210 80% 65%;
+    --sidebar-primary-foreground: 220 25% 8%;
+    --sidebar-accent: 220 15% 18%;
+    --sidebar-accent-foreground: 210 15% 88%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 210 80% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Leaflet map styles integration */
+  .leaflet-container {
+    @apply rounded-lg shadow-[--shadow-map];
+  }
+
+  .leaflet-popup-content-wrapper {
+    @apply bg-card text-card-foreground rounded-lg border border-border;
+  }
+
+  .leaflet-popup-tip {
+    @apply bg-card;
+  }
+
+  /* Custom scrollbar for better UX */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .map-gradient {
+    background: var(--gradient-map);
+  }
+
+  .emergency-gradient {
+    background: var(--gradient-emergency);
+  }
+
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .smooth-transition {
+    transition: var(--transition-smooth);
+  }
+
+  .bounce-transition {
+    transition: var(--transition-bounce);
+  }
+}

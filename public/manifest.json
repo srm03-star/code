@@ -1,0 +1,48 @@
+{
+  "name": "VIGYAAN - Disaster Risk Mapping",
+  "short_name": "VIGYAAN",
+  "description": "Vulnerability Indicator for Geospatial Yield, Alerts And Networks - Disaster risk mapping for India",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e3a8a",
+  "orientation": "portrait-primary",
+  "categories": ["utilities", "navigation", "government"],
+  "lang": "en-IN",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-mobile.jpg",
+      "sizes": "400x800",
+      "type": "image/jpeg",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/screenshot-desktop.jpg", 
+      "sizes": "1280x800",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    }
+  ],
+  "features": [
+    "Cross Platform",
+    "Fast",
+    "Reliable",
+    "Offline Support"
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}
